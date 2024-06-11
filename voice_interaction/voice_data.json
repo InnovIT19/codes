@@ -1,0 +1,634 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "positive_patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "hi there",
+        "howdy",
+        "nice to see you",
+        "how's it going",
+        "it's nice to meet you",
+        "it's a pleasure to meet you",
+        "what's new",
+        "it's good to see you",
+        "what's up"
+      ],
+      "positive_responses": [
+        "Hello! How can I help you today?",
+        "Hi there! What can I do for you?",
+        "Hey! How's it going?",
+        "Good morning! How can I assist you?",
+        "Good afternoon! What do you need help with?",
+        "Good evening! How can I be of service?",
+        "Hello! Welcome to our 3D fashion recommendation system. How can I assist you today?",
+        "Hi there! How can I help you find the perfect outfit?",
+        "Hey! Looking for some stylish recommendations?",
+        "Good day! How can I help you discover the latest fashion trends?",
+        "Good to see you! Ready to explore some fashionable options?",
+        "I'm doing well, thank you! How about I help you with your fashion choices?",
+        "Good evening! I'm here to provide you with personalized fashion suggestions.",
+        "Hi! Ready to upgrade your wardrobe?",
+        "Good! Nice to have you here. Let's find you some fabulous outfits.",
+        "Nice to see you too! How can I assist you with your fashion needs?",
+        "It's going pretty well, thanks! How about we dive into some fashion recommendations?",
+        "It's nice to meet you too! Let's get started on your fashion journey.",
+        "The pleasure is mine! How may I assist you in finding the perfect look?",
+        "Not much, just catching up on some work. How about we explore some fashion options?",
+        "It's good to see you as well! What brings you here?",
+        "Not much, just relaxing. What about you?"
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+	  {
+      "tag": "login",
+      "positive_patterns": [
+        "I want to login",
+        "login",
+        "sign in",
+        "I need to log in",
+        "can I login"
+      ],
+      "positive_responses": [
+        "Sure, please provide your User ID and Phone number.",
+        "Okay, let's get you logged in. What's your User ID and Phone number?",
+        "Let's log you in. Can you tell me your User ID and Phone number?",
+        "Please enter your User ID and Phone number to login."
+      ],
+      "negative_patterns": [
+        "I can't login",
+        "login failed",
+        "unable to login",
+        "can't log in",
+        "login error"
+      ],
+      "negative_responses": [
+        "I'm sorry to hear that. Please check your User ID and Phone number  try again.",
+        "It seems there's an issue with logging in. Please make sure your credentials are correct.",
+        "Login failed. Have you registered? If not, please register first.",
+        "There was an error logging in. Please try again or reset your password."
+      ]
+    },
+    {
+      "tag": "register",
+      "positive_patterns": [
+        "I want to register",
+        "register",
+        "sign up",
+        "I need to create an account",
+        "can I register",
+        "register"
+      ],
+      "positive_responses": [
+        "Sure, let's get you registered. Please provide your details.",
+        "Okay, I can help you with registration. What's your phone number and gender?",
+        "Let's create your account. Can you tell me your phone number and gender?",
+        "Please provide your phone number and gender to register."
+      ],
+      "negative_patterns": [
+        "I can't register",
+        "registration failed",
+        "unable to register",
+        "can't sign up",
+        "register error"
+
+      ],
+      "negative_responses": [
+        "I'm sorry to hear that. Please make sure all your details are correct and try again.",
+        "It seems there's an issue with registration. Have you already registered with this email?",
+        "Registration failed. Please check your information and try again.",
+        "There was an error in the registration process. Please try again later or contact support."
+      ]
+    },
+	  {
+      "tag": "reset_password",
+      "positive_patterns": [
+        "I forgot my password",
+        "reset password",
+        "password reset",
+        "I need to reset my password",
+        "can you help me reset my password",
+        "reset"
+      ],
+      "positive_responses": [
+        "Sure, let's reset your password. Please provide phone number.",
+        "Okay, I can help you reset your password. What's phone number?",
+        "Let's reset your password. Can you tell me phone number?",
+        "Please provide your phone number to reset your password."
+      ],
+      "negative_patterns": [
+        "I can't reset my password",
+        "password reset failed",
+        "unable to reset password",
+        "can't reset my password",
+        "reset password error"
+      ],
+      "negative_responses": [
+        "I'm sorry to hear that. Please make sure your email is correct and try again.",
+        "It seems there's an issue with resetting your password. Please check your email and try again.",
+        "Password reset failed. Have you registered? If not, please register first.",
+        "There was an error resetting your password. Please try again later or contact support."
+      ]
+    },
+    {
+      "tag": "enter_phone_number",
+      "positive_patterns": [
+        "my phone number is",
+        "here is my phone number",
+        "the number is",
+        "my number is",
+        "can I give my phone number",
+        "I want to provide my phone number",
+        "I'll tell you my phone number",
+        "do you need my phone number",
+        "let me give you my phone number"
+      ],
+      "positive_responses": [
+        "Sure, please go ahead and tell me your phone number.",
+        "Okay, I'm ready. Please provide your phone number.",
+        "Please tell me your phone number.",
+        "I'm listening, please say your phone number."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+	  {
+      "tag": "provide_gender",
+      "positive_patterns": [
+        "my gender is",
+        "I am a",
+        "I identify as",
+        "my gender identity is",
+        "I identify myself as",
+        "do you need my gender",
+        "I'll tell you my gender",
+        "can I give my gender"
+      ],
+      "positive_responses": [
+        "Please go ahead and tell me your gender.",
+        "I'm ready. Please provide your gender.",
+        "Please tell me your gender.",
+        "I'm listening, please say your gender."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+	  {
+      "tag": "provide_material_type",
+      "positive_patterns": [
+        "the material type is",
+        "it's made of",
+        "it's composed of",
+        "the material used is",
+        "it's",
+        "the clothing is made of",
+        "do you need the material type",
+        "I'll tell you the material",
+        "can I give you the material type",
+        "would you like to know the material",
+        "I'm ready to provide the material type",
+        "let me tell you the fabric",
+        "the garment is made of",
+        "shall I tell you the material"
+      ],
+      "positive_responses": [
+        "Sure, please go ahead and tell me the material type.",
+        "Okay, I'm ready. Please provide the material type.",
+        "Please tell me the material type.",
+        "I'm listening, please say the material type.",
+        "Go ahead, I'm ready to hear the material type.",
+        "Sure, let me know what the material is.",
+        "I'm all ears, please tell me the material.",
+        "You can tell me the material type now.",
+        "I'm ready for the material type. Please proceed.",
+        "Let me know the material type when you're ready."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+	  {
+      "tag": "capture_video",
+      "positive_patterns": [
+        "I want to capture a video",
+        "can I record a video",
+        "I need to take a video",
+        "let's record a video",
+        "can we start recording",
+        "I would like to capture a video",
+        "is it okay to take a video",
+        "I need to film this",
+        "let's start the video capture",
+        "can I start filming",
+        "I want to make a video",
+        "can you help me record a video",
+        "I want to shoot a video",
+        "can we begin video recording",
+        "let's film this",
+        "shall we start recording a video"
+      ],
+      "positive_responses": [
+        "Sure, you can start capturing a video now.",
+        "Okay, please go ahead and record your video.",
+        "Yes, feel free to start recording the video.",
+        "You can begin capturing the video.",
+        "Go ahead and start filming.",
+        "You may start the video capture.",
+        "Please proceed with recording the video.",
+        "Sure, you can begin the video recording.",
+        "Yes, start capturing your video.",
+        "Feel free to start filming your video now.",
+        "Go ahead and record your video.",
+        "Yes, you can begin shooting the video.",
+        "You may start the video recording.",
+        "Please go ahead and capture your video.",
+        "Sure, start your video capture now."
+      ],
+      "negative_patterns": [
+	    "reset",
+	    "I want to reset the video capture",
+        "can we restart the video",
+        "Let's start the video again",
+        "I need to reset the video recording",
+        "can we redo the video capture",
+        "I want to reset the recording",
+        "I need to reset and capture the video again",
+        "let's reset the video capture",
+        "can we start over with the video"
+	    ],
+      "negative_responses": [
+	      "Sure, let's reset and start capturing the video again.",
+        "Okay, we will restart the video recording.",
+        "Yes, let's reset the video capture.",
+        "You can start the video recording again now.",
+        "Let's go ahead and redo the video capture.",
+        "Sure, we will reset and begin filming again.",
+        "Okay, you can restart the video capture.",
+        "Feel free to start over with the video recording.",
+        "We are resetting the video capture for you.",
+        "Yes, let's start the video capture again."
+	    ]
+    },
+	  {
+      "tag": "upper_body",
+      "positive_patterns": [
+        "upper body",
+        "I need an outfit for my upper body",
+        "show me tops",
+        "can you suggest some shirts",
+        "I want to see jackets",
+        "recommend some sweaters",
+        "I am looking for blouses",
+        "I need some t-shirts",
+        "can you find some coats",
+        "show me some hoodies",
+        "I want to see cardigans"
+      ],
+      "positive_responses": [
+        "Sure, here are some tops for you.",
+        "Okay, take a look at these shirts.",
+        "Yes, here are some jackets you might like.",
+        "Here are some sweaters for you.",
+        "Check out these blouses.",
+        "I have found some t-shirts for you.",
+        "Here are some coats you might like.",
+        "Take a look at these hoodies.",
+        "Sure, here are some cardigans."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+    {
+      "tag": "lower_body",
+      "positive_patterns": [
+        "lower body",
+        "I need an outfit for my lower body",
+        "show me pants",
+        "can you suggest some jeans",
+        "I want to see skirts",
+        "recommend some shorts",
+        "I am looking for trousers",
+        "I need some leggings",
+        "can you find some capris",
+        "show me some slacks",
+        "I want to see joggers"
+      ],
+      "positive_responses": [
+        "Sure, here are some pants for you.",
+        "Okay, take a look at these jeans.",
+        "Yes, here are some skirts you might like.",
+        "Here are some shorts for you.",
+        "Check out these trousers.",
+        "I have found some leggings for you.",
+        "Here are some capris you might like.",
+        "Take a look at these slacks.",
+        "Sure, here are some joggers."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+    {
+      "tag": "full_body",
+      "positive_patterns": [
+        "full body",
+        "I need an outfit for my full body",
+        "show me dresses",
+        "can you suggest some jumpsuits",
+        "I want to see rompers",
+        "recommend some overalls",
+        "I am looking for playsuits",
+        "I need some gowns",
+        "can you find some maxi dresses",
+        "show me some jumpsuits",
+        "I want to see playsuits"
+      ],
+      "positive_responses": [
+        "Sure, here are some dresses for you.",
+        "Okay, take a look at these jumpsuits.",
+        "Yes, here are some rompers you might like.",
+        "Here are some overalls for you.",
+        "Check out these playsuits.",
+        "I have found some gowns for you.",
+        "Here are some maxi dresses you might like.",
+        "Take a look at these jumpsuits.",
+        "Sure, here are some playsuits."
+      ],
+      "negative_patterns": [],
+      "negative_responses": [],
+      "reset_patterns": [
+        "I want to reset the outfit selection",
+        "can we restart the outfit selection",
+        "let's start the outfit selection again",
+        "I need to reset the outfit choices",
+        "can we redo the outfit selection",
+        "I want to reset the selection process",
+        "I need to reset and choose the outfit again",
+        "let's reset the outfit selection",
+        "can we start over with choosing the outfit"
+      ],
+      "reset_responses": [
+        "Sure, let's reset and start the outfit selection again.",
+        "Okay, we will restart the outfit selection.",
+        "Yes, let's reset the outfit selection.",
+        "You can start choosing the outfit again now.",
+        "Let's go ahead and redo the outfit selection.",
+        "Sure, we will reset and begin choosing the outfit again.",
+        "Okay, you can restart the outfit selection.",
+        "Feel free to start over with choosing the outfit.",
+        "We are resetting the outfit selection for you.",
+        "Yes, let's start the outfit selection again."
+      ]
+    },
+	  {
+      "tag": "recommendations",
+      "positive_patterns": [
+        "can you recommend some outfits",
+        "what should I wear today",
+        "suggest some clothes for me",
+        "I need some fashion advice",
+        "what outfits do you have for me",
+        "what should I wear for a business meeting",
+        "suggest an outfit for a wedding",
+        "what can I wear for a casual day out",
+        "can you help me choose an outfit",
+        "what do you think I should wear",
+        "give me some clothing recommendations",
+        "what are your outfit suggestions",
+        "show me some clothes I might like",
+        "show me some recommendations",
+        "what are your recommendations",
+        "recommend some outfits for me",
+        "can you suggest some clothing options",
+        "I need some outfit ideas",
+        "what should I wear today"
+      ],
+      "positive_responses": [
+        "Sure! Based on your preferences, here are some outfit recommendations.",
+        "I have some great outfit suggestions for you. Take a look!",
+        "Here are some outfits you might like.",
+        "Based on your style, these outfits should suit you well.",
+        "Here are some clothing options for you.",
+        "For a business meeting, I recommend these outfits.",
+        "For a wedding, these outfits would be perfect.",
+        "For a casual day out, these outfits should be great.",
+        "I'd be happy to help! Here are some outfit ideas.",
+        "Based on your input, these outfits might work well.",
+        "Here are some fashionable options you might enjoy.",
+        "Sure! Here are some recommendations based on your preferences.",
+        "I've found some great options for you. Take a look!",
+        "Here are a few outfit suggestions for you.",
+        "Check out these trendy outfits!",
+        "Let me show you some stylish recommendations.",
+        "I've curated a selection of outfits just for you."
+      ],
+      "negative_patterns": [
+        "I don't like your suggestions",
+        "your recommendations are bad",
+        "these outfits are awful",
+        "I don't trust your fashion sense",
+        "your advice is not helpful",
+        "these suggestions are not good",
+        "I dislike these recommendations",
+        "your outfit ideas are terrible",
+        "these clothes are not my style"
+      ],
+      "negative_responses": [
+        "I'm sorry to hear that. Let me suggest some different options.",
+        "I apologize if these suggestions aren't to your liking. Let me find more.",
+        "I'm sorry you feel that way. I'll find some other outfits for you.",
+        "I apologize for the inconvenience. I'll try to improve my recommendations.",
+        "I'm sorry these weren't helpful. I'll suggest other options.",
+        "Let me provide some alternative recommendations.",
+        "I'll try to suggest different outfits that you might prefer.",
+        "I apologize. Let's try a different style that might suit you better.",
+        "I'm sorry about that. Let me offer some new suggestions."
+      ]
+    },
+    {
+      "tag": "feedback",
+      "positive_patterns": [
+        "I love these recommendations",
+        "these outfits are great",
+        "I appreciate the suggestions",
+        "thanks for the help",
+        "your advice is very helpful",
+        "these clothes are perfect",
+        "I'm happy with these recommendations",
+        "these outfit suggestions are wonderful",
+        "I really like your fashion advice",
+        "thank you for the great recommendations",
+        "I like this outfit",
+        "the recommendations are great",
+        "I love this outfit",
+        "the recommendations are perfect"
+      ],
+      "positive_responses": [
+        "Thank you! I'm glad I could help.",
+        "Great to hear! I'm happy you like the recommendations.",
+        "You're welcome! I'm here to assist.",
+        "You're welcome! Feel free to ask if you need more help.",
+        "Thank you! I'm glad my advice is helpful.",
+        "I'm happy to hear that! Enjoy your new outfits.",
+        "Great! I'm glad you're satisfied with the recommendations.",
+        "You're welcome! Let me know if you need more suggestions.",
+        "Thank you! I'm glad you like the fashion advice.",
+        "You're welcome! I'm here to help with any further needs.",
+        "Glad you liked it!",
+        "Thank you for the feedback!",
+        "Great to hear that you love it!",
+        "Thank you for the positive feedback!"
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+    {
+      "tag": "color_feedback",
+      "positive_patterns": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "I like the color",
+        "this color is perfect",
+        "the color is nice",
+        "I love this color",
+        "the color is great",
+        "this color suits me",
+        "I am happy with the color",
+        "the color looks good on me",
+        "this color is beautiful",
+        "I am pleased with the color"
+      ],
+      "positive_responses": [
+        "I'm glad you like the color!",
+        "Great to hear you love the color.",
+        "Happy to know the color suits you.",
+        "It's wonderful that you find the color nice.",
+        "I'm pleased that you're happy with the color."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+    {
+      "tag": "overall_outfit_feedback",
+      "positive_patterns": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "I like the outfit",
+        "this outfit is perfect",
+        "the outfit is nice",
+        "I love this outfit",
+        "the outfit is great",
+        "this outfit suits me",
+        "I am happy with the outfit",
+        "the outfit looks good on me",
+        "this outfit is beautiful",
+        "I am pleased with the outfit"
+      ],
+      "positive_responses": [
+        "I'm glad you like the outfit!",
+        "Great to hear you love the outfit.",
+        "Happy to know the outfit suits you.",
+        "It's wonderful that you find the outfit nice.",
+        "I'm pleased that you're happy with the outfit."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+    {
+      "tag": "recommended_style_feedback",
+      "positive_patterns": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "I like this style",
+        "this style is perfect",
+        "the style is nice",
+        "I love this style",
+        "the style is great",
+        "this style suits me",
+        "I am happy with this style",
+        "the style looks good on me",
+        "this style is beautiful",
+        "I am pleased with this style"
+      ],
+      "positive_responses": [
+        "I'm glad you like the style",
+        "great to hear you love the style",
+        "happy to know the style suits you",
+        "it's wonderful that you find the style nice",
+        "I'm pleased that you're happy with the style."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+    {
+      "tag": "recommended_size_feedback",
+      "positive_patterns": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "the size is perfect",
+        "this fits me well",
+        "I am happy with the size",
+        "the size is just right",
+        "this size is good",
+        "I love the fit",
+        "the size is great",
+        "this size suits me",
+        "I am pleased with the size",
+        "the fit is nice"
+      ],
+      "positive_responses": [
+        "I'm glad the size is perfect for you!",
+        "Great to hear it fits you well.",
+        "Happy to know the size is just right.",
+        "It's wonderful that you find the fit nice.",
+        "I'm pleased that you're happy with the size."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    },
+    {
+      "tag": "thanks",
+      "positive_patterns": [
+        "bye",
+        "goodbye",
+        "see you later",
+        "take care",
+        "thank you",
+        "thanks a lot",
+        "thanks for your help",
+        "appreciate it",
+        "thanks a bunch",
+        "thank you so much",
+        "thank you very much",
+        "thanks"
+      ],
+      "positive_responses": [
+        "Goodbye! Have a great day!",
+        "Bye! Take care!",
+        "See you later! Have a nice day!",
+        "Take care! Goodbye!",
+        "You're welcome! Feel free to ask if you need any more assistance.",
+        "No problem! Let me know if there's anything else I can help you with.",
+        "Glad I could assist you! Don't hesitate to reach out if you have more questions.",
+        "You're welcome! Happy to help.",
+        "Anytime! Let me know if you need further assistance.",
+        "You're welcome! It's my pleasure to help you."
+      ],
+      "negative_patterns": [],
+      "negative_responses": []
+    }
+  ]
+}
