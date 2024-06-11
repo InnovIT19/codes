@@ -4,7 +4,6 @@ import numpy as np
 
 # Step 1: Extract Snapshots from Video
 def extract_snapshots(video_path, output_folder):
-    # Ensure the output folder exists
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
@@ -28,12 +27,11 @@ extract_snapshots(video_path, output_folder)
 
 # Step 2: Extract Body Dimensions from Snapshot
 def extract_body_dimensions(snapshot_path):
-    # For demonstration purposes, we return random dimensions
     dimensions = {
         'height': np.random.uniform(150, 200),  # in cm
-        'shoulder_width': np.random.uniform(35, 50),  # in cm
-        'waist_circumference': np.random.uniform(60, 90),  # in cm
-        'hip_circumference': np.random.uniform(80, 110)  # in cm
+        'shoulder_width': np.random.uniform(35, 55),  # in cm
+        'waist_circumference': np.random.uniform(25, 50),  # in cm
+        'hip_circumference': np.random.uniform(20, 50)  # in cm
     }
     return dimensions
 
@@ -80,13 +78,12 @@ class ReinforcementLearningModel:
 # Step 4: Train and Test the Model
 model = ReinforcementLearningModel()
 
-# Train the model with dummy data
 for _ in range(1000):
     dummy_dimensions = {
-        'height': np.random.uniform(150, 200),
-        'shoulder_width': np.random.uniform(35, 50),
-        'waist_circumference': np.random.uniform(60, 90),
-        'hip_circumference': np.random.uniform(80, 110)
+        'height': np.random.uniform(150, 200),  # in cm
+        'shoulder_width': np.random.uniform(35, 55),  # in cm
+        'waist_circumference': np.random.uniform(25, 50),  # in cm
+        'hip_circumference': np.random.uniform(20, 50)  # in cm
     }
     actual_shape = np.random.choice(['hourglass', 'inverted_triangle', 'rectangle', 'pear'])
     model.train(dummy_dimensions, actual_shape)
