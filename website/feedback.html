@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Recommendation Feedback</title>
+    <style>
+        .feedback-dialog {
+            width: 9in;
+            height: 4in;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: auto;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .stars {
+            display: flex;
+            justify-content: center;
+        }
+        .star {
+            font-size: 5em;
+            cursor: pointer;
+            color: #ddd;
+           
+        }
+        .star.selected {
+            color: gold;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 25px 100px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #9e7255;
+            color: white;
+            border-radius: 5px;
+            font-size: 40px;
+            border-radius: 10px;
+        }
+    </style>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+</head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about">About</a></li>
+							<li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading about-page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Feedback</h2>
+                        <span>We value your feedback &amp; improve your prefreable look</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** feedback Area Starts ***** -->
+    <div class="feedback-dialog">
+        <div class="section active" id="outfit-feedback">
+            <h2 style="font-size: 50px">Feedback for Outfit</h2>
+            <div class="stars" id="outfit-stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="buttons">
+                <button onclick="nextSection('color-feedback')">Next</button>
+            </div>
+        </div>
+        <div class="section" id="color-feedback">
+            <h2 style="font-size: 50px">Feedback for Color</h2>
+            <div class="stars" id="color-stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="buttons">
+                <button onclick="nextSection('size-feedback')">Next</button>
+            </div>
+        </div>
+        <div class="section" id="size-feedback">
+            <h2 style="font-size: 50px">Feedback for Size</h2>
+            <div class="stars" id="size-stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="buttons">
+                <button onclick="nextSection('overall-feedback')">Next</button>
+            </div>
+        </div>
+        <div class="section" id="overall-feedback">
+            <h2 style="font-size: 50px">Feedback for Overall Appearance</h2>
+            <div class="stars" id="overall-stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <div class="buttons">
+                <button onclick="submitFeedback()">Submit</button>
+                <button onclick="resetFeedback()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** Contact Area Ends ***** -->
+
+    
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/logo.png" alt="hexashop ecommerce templatemo">
+                        </div>
+                        <ul>
+                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
+                            <li><a href="#">hexashop@company.com</a></li>
+                            <li><a href="#">010-020-0340</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
+                        
+                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        const sections = document.querySelectorAll('.section');
+        const stars = document.querySelectorAll('.star');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const value = star.getAttribute('data-value');
+                const starsParent = star.parentElement;
+                const starsInSection = starsParent.querySelectorAll('.star');
+                
+                starsInSection.forEach(s => {
+                    s.classList.remove('selected');
+                    if (s.getAttribute('data-value') <= value) {
+                        s.classList.add('selected');
+                    }
+                });
+            });
+        });
+
+        function nextSection(nextId) {
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(nextId).classList.add('active');
+        }
+
+        function submitFeedback() {
+            alert('Feedback submitted!');
+        }
+
+        function resetFeedback() {
+            stars.forEach(star => {
+                star.classList.remove('selected');
+            });
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById('outfit-feedback').classList.add('active');
+        }
+    
+
+    </script>
+
+  </body>
+
+</html>
