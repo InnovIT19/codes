@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Video Capture</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/video_capturing_style.css">
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <div class="left">
+        <img src="assets/images/officew.png" alt="background2">
+    </div>
+    
+    <div class="right">
+        <div class="text-container">
+            <h1>Capture Your Video</h1>
+        </div>
+        <div class="description">
+            <ul class="star-list">
+                <li>When you're ready, please press the video icon in the screen</li>
+                <li>Screen will start to taking the video</li>
+                <li>You have to turn around to take a  video for better recommendations.</li>
+                <li>After 30s of time, the screen will display a pop-up notofication, you have to press "OK"</li>
+              </ul>
+        </div>
+        <div class="video-capture-image" onclick="navigateToPython()">
+            <img src="assets/images/video.png" alt="Westmire A56 Headset">
+        </div>
+    </div>
+
+    <script>
+        function navigateToPython() {
+            window.location.href = 'video_capture.py';
+        }
+    </script>
+  </body>
+
+</html>
