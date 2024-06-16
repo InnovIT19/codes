@@ -1,0 +1,77 @@
+body {
+    font-family: 'Dancing Script', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    background-color: #C4A484;
+    background-size: 150% 150%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.left {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left img {
+    width: 100%;
+    height: auto;
+}
+
+.right {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-container h1 {
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.video-capture-image {
+    cursor: pointer;
+}
+
+.video-capture-image img {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    
+}
+ul {
+    font-size: 30px; /* Change the font size here */
+    font-family: 'Raleway', sans-serif;
+}
+ul.star-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+ul.star-list li::before {
+    content: '★'; /* Unicode star character */
+    color: gold; /* Star color */
+    margin-right: 10px; /* Space between star and text */
+    font-size: 20px; /* Star size */
+}
